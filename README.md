@@ -1,4 +1,4 @@
-# Pomodoro IoT – Futuro do Trabalho com ESP32 e ThingSpeak
+# Pomodoro IoT – Futuro do Trabalho
 
 
 
