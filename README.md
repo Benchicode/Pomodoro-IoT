@@ -35,7 +35,7 @@ Com o aumento do trabalho remoto e híbrido, muitos profissionais passam longos 
 
 Apesar de existirem técnicas como o método Pomodoro, na prática as pessoas esquecem de ativar timers ou ignoram alarmes do próprio computador/celular.
 
----
+
 
 ## 3. Solução Proposta
 
@@ -73,7 +73,7 @@ Os tempos foram reduzidos para **simulação**:
 
 Na aplicação real, esses valores podem ser ajustados para **25 minutos** e **5 minutos**.
 
----
+
 
 ## 4. Funcionalidades
 
@@ -126,7 +126,7 @@ Na aplicação real, esses valores podem ser ajustados para **25 minutos** e **5
   - `field1` → código do estado  
   - `field2` → ciclo atual  
 
----
+
 
 ## 6. Dependências
 
@@ -144,3 +144,14 @@ As seguintes bibliotecas são utilizadas no código:
 - `WiFi.h` – Gerenciamento da conexão Wi-Fi do ESP32  
 - `HTTPClient.h` – Envio de requisições HTTP (GET) para o ThingSpeak  
 - É necessário instalar o **core do ESP32** na Arduino IDE, caso o projeto seja executado localmente.
+
+
+
+## 7. Explicação sobre os endpoints HTTP utilizados
+
+A comunicação IoT do projeto foi implementada por meio de requisições HTTP ao serviço **ThingSpeak**. O ESP32 conecta-se à rede Wi-Fi e, sempre que ocorre uma mudança de estado no ciclo Pomodoro, o dispositivo envia uma requisição HTTP do tipo `GET` para o endpoint:
+
+`http://api.thingspeak.com/update`
+
+Nessa requisição, alguns dados são enviados na própria URL. O parâmetro `api_key` é a **chave de escrita do canal** e serve para autorizar o envio das informações. Já o `field1` recebe um número que representa o estado do Pomodoro (`0 = parado`, `1 = foco`, `2 = pausa curta`, `3 = pausa longa`) e o `field2` recebe o número do ciclo (de `1` a `4`). Assim, cada vez que o estado muda, essa informação é registrada no ThingSpeak e pode ser visualizada em forma de gráfico.
+
