@@ -1,6 +1,6 @@
 # Pomodoro IoT – Futuro do Trabalho com ESP32 e ThingSpeak
 
----
+
 
 ## Imagem do circuito
 
@@ -9,13 +9,12 @@
   <img src="img/circuito.png" alt="Dashboard ThingSpeak" width="70%">
 </p>
 
----
+
 
 ## Link do projeto no Wokwi
 
 [Projeto no Wokwi](https://wokwi.com/projects/447641177141234689)
 
----
 
 ## 1. Descrição Geral
 
@@ -23,7 +22,7 @@ Este projeto implementa um temporizador **Pomodoro IoT** utilizando um **ESP32**
 
 O sistema alterna automaticamente entre períodos de foco e pausa, sinalizando o estado atual por meio de **LED** e **buzzer**, e envia os dados de cada ciclo para a nuvem usando comunicação **HTTP** com o serviço **ThingSpeak**.
 
----
+
 
 ## 2. Problema
 
