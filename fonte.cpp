@@ -7,8 +7,8 @@ const int BUTTON_PIN = 4;
 const int BUZZER_PIN = 5;
 
 // Tempos  
-const unsigned long WORK_TIME  = 5 * 1000UL; // 25s foco
-const unsigned long BREAK_TIME = 5  * 1000UL; // 5s pausa
+const unsigned long WORK_TIME  = 25 * 1000UL; // 25s foco
+const unsigned long BREAK_TIME = 5  * 1000UL; // 5s pausa curta
 const unsigned long LONG_BREAK = 25 * 1000UL; // 25s pausa longa
 
 //  Wi-Fi / ThingSpeak 
@@ -71,7 +71,7 @@ void changeMode(Mode newMode) {
   mode = newMode;
   stateStart = millis();
 
-  int stateCode = 0; // 0=IDLE, 1=FOCO, 2=PAUSA CURTA, 3=PAUSA LONGA
+  int stateCode = 0; // 0=IDLE, 1=foco, 2=pausa curta, 3=pausa longa
 
   switch (newMode) {
     case WORK:
