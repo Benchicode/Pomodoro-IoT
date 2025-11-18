@@ -1,6 +1,6 @@
 # Pomodoro IoT – Futuro do Trabalho
 
-
+### Trabalho feito por: Michel Lima Benchimol - RM 567345 | Eduarda da Silva Brito - RM567347 | Gustavo Castilho Gonçalves - RM566970
 
 ## Imagem do circuito
 
